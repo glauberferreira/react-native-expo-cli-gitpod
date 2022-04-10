@@ -2,6 +2,7 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 
+# Commands to start on workspace startup
 tasks:
   - name: Yarn
     before: curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -9,3 +10,8 @@ tasks:
     before: yarn global add expo-cli
     init: yarn install
     command: yarn run start
+
+# Ports to expose on workspace startup
+ports:
+  - port: 19006
+    onOpen: open-preview
