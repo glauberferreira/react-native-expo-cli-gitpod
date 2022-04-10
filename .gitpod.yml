@@ -5,6 +5,7 @@
 # Commands to start on workspace startup
 tasks:
   - before: |
+      npm install -g npm@8.6.0
       npm install --global yarn
       yarn global add expo-cli
     init: yarn install
