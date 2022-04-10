@@ -7,7 +7,7 @@ tasks:
   - name: Yarn
     before: curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
   - name: Expo
-    before: yarn global add expo-cli
+    before: yarn global add expo-cli ngrok
     init: yarn install
     command: yarn run start
 
@@ -15,3 +15,4 @@ tasks:
 ports:
   - port: 19006
     onOpen: open-preview
+  - port: 19000
