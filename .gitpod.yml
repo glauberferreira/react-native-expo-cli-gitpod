@@ -3,8 +3,9 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - before: curl --compressed -o- -L https://yarnpkg.com/install.sh | bash && yarn global add expo-cli
+  - name: Yarn
+    before: curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+  - name: Expo
+    before: yarn global add expo-cli
     init: yarn install
     command: yarn run start
-
-
